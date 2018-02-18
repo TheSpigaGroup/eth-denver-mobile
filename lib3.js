@@ -1,5 +1,5 @@
 import Web3 from 'web3';
-import CustodyToken from './build/contracts/CustodyToken.json';
+import CustodyToken from './build/contracts/CustodyChain.json';
 
 const custodyAddr = '0x7ba431d1f33cb44ebd5d2f6ba541e9ff6902120e';
 

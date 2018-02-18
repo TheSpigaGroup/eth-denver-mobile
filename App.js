@@ -3,9 +3,9 @@ import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import { Text, View } from 'react-native';
-import './global';
-import Router from './Router.js';
-import trustee from './trustee/reducers.js';
+// import './global';
+import Router from './Router';
+import trustee from './trustee/reducers';
 
 const rootReducer = combineReducers({
   trustee,

@@ -22,6 +22,7 @@
     "expo": "^25.0.0",
     "native-base": "^2.3.9",
     "node-libs-browser": "^2.1.0",
+    "qrcode-js": "0.0.2",
     "react": "16.2.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
     "react-navigation": "^1.0.3",

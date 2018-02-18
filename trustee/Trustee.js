@@ -21,6 +21,9 @@ export default class Trustee extends Component {
     }
   };
   render() {
+    /*
+     * Beginning Screen
+     */
     let view = (<Body>
       <H1 style={{ marginTop: 50 }}>
         Start a new CustodyChain
@@ -37,12 +40,11 @@ export default class Trustee extends Component {
       </Button>
     </Body>);
 
+    /*
+     * Scan Screen
+     */
     if (this.state.view === 'scan') {
       view = (<Body>
-        <H1 style={{ marginTop: 50 }}>
-          Start a new CustodyChain
-        </H1>
-
         <Button full rounded dark
           style={{ marginTop: 100, height: 100 }}
           onPress={() => {
@@ -63,15 +65,23 @@ export default class Trustee extends Component {
         /> */}
       </Body>);
     }
+    /*
+     * Approval Screen
+     */
     if (this.state.view === 'approve') {
       view = (<Body>
         <H1 style={{ marginTop: 50 }}>
-          Start a new CustodyChain
+          Does this list look ok?
         </H1>
-        <List>
+        <List style={{ marginTop: 50 }}>
           {this.state.whitelist.map(a =>
-            <ListItem key={`${a}`}>
-              <Text>{a}</Text>
+            <ListItem icon key={`${a}`}>
+              <Left>
+                <Text>{a}</Text>
+              </Left>
+              <Right>
+                <Icon name='ios-checkmark' style={{ color: 'green' }} />
+              </Right>
             </ListItem>
           )}
         </List>
@@ -87,11 +97,31 @@ export default class Trustee extends Component {
         </Button>
         <Button full rounded danger
           onPress={() => {
-            this.setState({view: 'track'});
+            this.setState({view: 'begin'});
           }}
         >
           <Text>
             Reject
+          </Text>
+        </Button>
+      </Body>);
+    }
+    /*
+     * Track Screen
+     */
+    if (this.state.view === 'track') {
+      view = (<Body>
+        <H1 style={{ marginTop: 50 }}>
+          Tracking _tokenId!
+        </H1>
+        <Button full rounded primary
+          style={{ marginTop: 50 }}
+          onPress={() => {
+            // Check chain for changes
+          }}
+        >
+          <Text>
+            Update
           </Text>
         </Button>
       </Body>);

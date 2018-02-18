@@ -12,6 +12,13 @@ const rootReducer = combineReducers({
 });
 
 const rootState = {
+  trustee: {
+    address: null,
+    privateKey: null,
+    whiteList: [],
+    owner: null,
+    inTransit: false,
+  }
 };
 
 /* eslint-disable no-underscore-dangle */

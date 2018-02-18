@@ -5,11 +5,13 @@ import { StackNavigator, addNavigationHelpers } from "react-navigation";
 import Init from './Init.js';
 import Trustee from './trustee/Trustee.js';
 import Custodian from './custodian/Custodian.js';
+import Transfer from './Transfer.js';
 
 const Routes = {
   Home: { screen: Init },
   Trustee: { screen: Trustee },
-  Custodian: { screen: Custodian }
+  Custodian: { screen: Custodian },
+  Transfer: { screen: Transfer }
 };
 
 const AppRouter = StackNavigator(Routes);

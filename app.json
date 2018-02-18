@@ -1,5 +1,21 @@
 {
   "expo": {
-    "sdkVersion": "25.0.0"
+    "sdkVersion": "25.0.0",
+    "name": "CustodyChain UI",
+    "description": "Provide a client interface for the CustodyChain Token",
+    "slug": "custodychain",
+    "privacy": "public",
+    "platforms": ["ios"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/img/custodychain_square.png",
+    "splash": {
+      "image": "./assets/img/custodychain_square.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    }
   }
 }

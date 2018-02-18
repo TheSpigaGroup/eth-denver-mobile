@@ -1,7 +1,17 @@
 const trustee = (state = {}, action) => {
   switch (action.type) {
-    default:
-      return state;
+  case 'SET_WALLET':
+    return {
+      ...state,
+      ...action,
+    };
+  case 'GET_WHITELIST':
+    return {
+      ...state,
+      whiteList: action.whiteList,
+    };
+  default:
+    return state;
   }
 };
 
